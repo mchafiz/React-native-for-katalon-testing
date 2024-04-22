@@ -14,7 +14,8 @@
     "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.katalon.test"
+      "bundleIdentifier": "com.katalon.test",
+      "buildNumber": "1.0.0"
     },
     "android": {
       "adaptiveIcon": {

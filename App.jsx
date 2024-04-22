@@ -4,7 +4,6 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import PageA from "./screen/PageA";
 import PageB from "./screen/PageB";
-import PageC from "./screen/PageC";
 import { Ionicons } from "@expo/vector-icons";
 
 const Tab = createBottomTabNavigator();
@@ -26,8 +25,6 @@ export default function App() {
               iconName = focused ? "list" : "list";
             } else if (route.name === "Page B") {
               iconName = focused ? "list" : "list";
-            } else if (route.name === "Page C") {
-              iconName = focused ? "list" : "list";
             }
 
             // You can return any component here
@@ -42,7 +39,6 @@ export default function App() {
       >
         <Tab.Screen name="Page A" component={PageA} />
         <Tab.Screen name="Page B" component={PageB} />
-        <Tab.Screen name="Page C" component={PageC} />
       </Tab.Navigator>
     </NavigationContainer>
   );
