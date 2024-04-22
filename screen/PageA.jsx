@@ -1,5 +1,5 @@
 import { ListItem } from "@rneui/base";
-import { ScrollView, View, Text } from "react-native";
+import { ScrollView, View, Text, Alert } from "react-native";
 import { testProps } from "../lib/utils";
 
 const viewList = [
@@ -51,6 +51,14 @@ const viewList = [
 ];
 
 export default function PageA() {
+  const showAlert = (data) => {
+    Alert.alert(
+      `${data.name}`,
+      `${data.desc}`,
+      [{ text: "OK", onPress: () => console.log("OK Pressed") }],
+      { cancelable: false }
+    );
+  };
   return (
     <View>
       <Text
@@ -65,7 +73,14 @@ export default function PageA() {
       <ScrollView>
         <View accessible={true}>
           {viewList.map((data, i) => (
-            <ListItem key={i} bottomDivider {...testProps(data.name)}>
+            <ListItem
+              key={i}
+              bottomDivider
+              {...testProps(data.name)}
+              onPress={() => {
+                showAlert(data);
+              }}
+            >
               <ListItem.Content>
                 <ListItem.Title>{data.name}</ListItem.Title>
                 <ListItem.Subtitle>{data.desc}</ListItem.Subtitle>
