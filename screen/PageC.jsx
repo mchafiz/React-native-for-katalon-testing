@@ -66,7 +66,6 @@ export default function PageC() {
           <ListItem
             key={i}
             bottomDivider
-            onPress={() => navigate(componentId, `${data.screen}Screen`)}
           >
             <ListItem.Content>
               <ListItem.Title>{data.name}</ListItem.Title>
