@@ -63,11 +63,7 @@ export default function PageC() {
       </Text>
       <View>
         {viewList.map((data, i) => (
-          <ListItem
-            key={i}
-            bottomDivider
-            onPress={() => navigate(componentId, `${data.screen}Screen`)}
-          >
+          <ListItem key={i} bottomDivider>
             <ListItem.Content>
               <ListItem.Title>{data.name}</ListItem.Title>
               <ListItem.Subtitle>{data.desc}</ListItem.Subtitle>
